@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full module listing &mdash; A405</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Home
+          </a>
+              <div class="version">
+                2024Jan01
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Full module listing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-a405.utils.helper_funs">helper_funs full module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a405.utils.helper_funs.find_centers"><code class="docutils literal notranslate"><span class="pre">find_centers()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.utils.helper_funs.make_tuple"><code class="docutils literal notranslate"><span class="pre">make_tuple()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.utils.helper_funs.test_scalar"><code class="docutils literal notranslate"><span class="pre">test_scalar()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-a405.thermo.rootfinder">rootfinder full module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.rootfinder.BracketError"><code class="docutils literal notranslate"><span class="pre">BracketError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.rootfinder.find_interval"><code class="docutils literal notranslate"><span class="pre">find_interval()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.rootfinder.fzero"><code class="docutils literal notranslate"><span class="pre">fzero()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.rootfinder.test_rootfinder"><code class="docutils literal notranslate"><span class="pre">test_rootfinder()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-a405.thermo.constants">constants full module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.constants.constants"><code class="docutils literal notranslate"><span class="pre">constants</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-a405.thermo.thermlib">thermlib full module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.convertSkewToTemp"><code class="docutils literal notranslate"><span class="pre">convertSkewToTemp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.convertTempToSkew"><code class="docutils literal notranslate"><span class="pre">convertTempToSkew()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_Td"><code class="docutils literal notranslate"><span class="pre">find_Td()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_Tmoist"><code class="docutils literal notranslate"><span class="pre">find_Tmoist()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_Tv"><code class="docutils literal notranslate"><span class="pre">find_Tv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_buoy"><code class="docutils literal notranslate"><span class="pre">find_buoy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_esat"><code class="docutils literal notranslate"><span class="pre">find_esat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_lcl"><code class="docutils literal notranslate"><span class="pre">find_lcl()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_lv"><code class="docutils literal notranslate"><span class="pre">find_lv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_resid_rsat"><code class="docutils literal notranslate"><span class="pre">find_resid_rsat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_resid_thetae"><code class="docutils literal notranslate"><span class="pre">find_resid_thetae()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_rsat"><code class="docutils literal notranslate"><span class="pre">find_rsat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_rvrl"><code class="docutils literal notranslate"><span class="pre">find_rvrl()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_theta"><code class="docutils literal notranslate"><span class="pre">find_theta()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_thetaep"><code class="docutils literal notranslate"><span class="pre">find_thetaep()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_thetaes"><code class="docutils literal notranslate"><span class="pre">find_thetaes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_thetaet"><code class="docutils literal notranslate"><span class="pre">find_thetaet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.find_thetal"><code class="docutils literal notranslate"><span class="pre">find_thetal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.make_dry_adiabat"><code class="docutils literal notranslate"><span class="pre">make_dry_adiabat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.test_therm"><code class="docutils literal notranslate"><span class="pre">test_therm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.theta_diff"><code class="docutils literal notranslate"><span class="pre">theta_diff()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.thetaep_diff"><code class="docutils literal notranslate"><span class="pre">thetaep_diff()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.thetaes_diff"><code class="docutils literal notranslate"><span class="pre">thetaes_diff()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.tinvert_rsat"><code class="docutils literal notranslate"><span class="pre">tinvert_rsat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.thermo.thermlib.tinvert_thetae"><code class="docutils literal notranslate"><span class="pre">tinvert_thetae()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-a405.skewT.skewlib">skewlib full module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a405.skewT.skewlib.makeSkewDry"><code class="docutils literal notranslate"><span class="pre">makeSkewDry()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.skewT.skewlib.plot_test"><code class="docutils literal notranslate"><span class="pre">plot_test()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-a405.skewT.fullskew">fullskew module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a405.skewT.fullskew.find_corners"><code class="docutils literal notranslate"><span class="pre">find_corners()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.skewT.fullskew.makeSkewWet"><code class="docutils literal notranslate"><span class="pre">makeSkewWet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.skewT.fullskew.make_default_labels"><code class="docutils literal notranslate"><span class="pre">make_default_labels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.skewT.fullskew.plot_test"><code class="docutils literal notranslate"><span class="pre">plot_test()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-a405.soundings.wyominglib">wyominglib full module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a405.soundings.wyominglib.make_frames"><code class="docutils literal notranslate"><span class="pre">make_frames()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.soundings.wyominglib.parse_data"><code class="docutils literal notranslate"><span class="pre">parse_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.soundings.wyominglib.parse_header"><code class="docutils literal notranslate"><span class="pre">parse_header()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.soundings.wyominglib.read_soundings"><code class="docutils literal notranslate"><span class="pre">read_soundings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.soundings.wyominglib.write_soundings"><code class="docutils literal notranslate"><span class="pre">write_soundings()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-a405.dropgrow.aerolib">aerolib full module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a405.dropgrow.aerolib.create_koehler"><code class="docutils literal notranslate"><span class="pre">create_koehler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.dropgrow.aerolib.find_koehler_coeffs"><code class="docutils literal notranslate"><span class="pre">find_koehler_coeffs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.dropgrow.aerolib.lognormal"><code class="docutils literal notranslate"><span class="pre">lognormal()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-a405.dropgrow.drop_grow">dropgrow full module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a405.dropgrow.drop_grow.Scalc"><code class="docutils literal notranslate"><span class="pre">Scalc()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.dropgrow.drop_grow.find_derivs"><code class="docutils literal notranslate"><span class="pre">find_derivs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.dropgrow.drop_grow.find_diff"><code class="docutils literal notranslate"><span class="pre">find_diff()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.dropgrow.drop_grow.rlcalc"><code class="docutils literal notranslate"><span class="pre">rlcalc()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a405.dropgrow.drop_grow.rlderiv"><code class="docutils literal notranslate"><span class="pre">rlderiv()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Home</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Full module listing</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/full_listing.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="full-module-listing">
+<h1>Full module listing<a class="headerlink" href="#full-module-listing" title="Permalink to this heading"></a></h1>
+<section id="module-a405.utils.helper_funs">
+<span id="helper-funs-full-module"></span><h2>helper_funs full module<a class="headerlink" href="#module-a405.utils.helper_funs" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.utils.helper_funs.find_centers">
+<span class="sig-prename descclassname"><span class="pre">a405.utils.helper_funs.</span></span><span class="sig-name descname"><span class="pre">find_centers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/utils/helper_funs.html#find_centers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.utils.helper_funs.find_centers" title="Permalink to this definition"></a></dt>
+<dd><p>return a vector of bin centers given the bin edges</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy 1-d vector</em>) – vector of edges of bins</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>center</strong> – vector of centers of bins</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy 1-d vector</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.utils.helper_funs.make_tuple">
+<span class="sig-prename descclassname"><span class="pre">a405.utils.helper_funs.</span></span><span class="sig-name descname"><span class="pre">make_tuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tupname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'values'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/utils/helper_funs.html#make_tuple"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.utils.helper_funs.make_tuple" title="Permalink to this definition"></a></dt>
+<dd><p>make a named tuple from a dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_dict</strong> (<em>dictionary</em>) – Any python object with key/value pairs</p></li>
+<li><p><strong>tupname</strong> (<em>string</em>) – optional name for the new namedtuple type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>the_tup</strong> – named tuple with keys as attributes</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>namedtuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.utils.helper_funs.test_scalar">
+<span class="sig-prename descclassname"><span class="pre">a405.utils.helper_funs.</span></span><span class="sig-name descname"><span class="pre">test_scalar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/utils/helper_funs.html#test_scalar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.utils.helper_funs.test_scalar" title="Permalink to this definition"></a></dt>
+<dd><p>return true if every argument is a scalar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>list</em><em> of </em><em>arguments</em>) – any number of comma-separated vector/scalar arguments</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>isscalar</strong> – true if every argument is type np.scalar</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-a405.thermo.rootfinder">
+<span id="rootfinder-full-module"></span><h2>rootfinder full module<a class="headerlink" href="#module-a405.thermo.rootfinder" title="Permalink to this heading"></a></h2>
+<p>Two convenience functions for rootfinding</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="a405.thermo.rootfinder.BracketError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a405.thermo.rootfinder.</span></span><span class="sig-name descname"><span class="pre">BracketError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/rootfinder.html#BracketError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.rootfinder.BracketError" title="Permalink to this definition"></a></dt>
+<dd><p>subclass ValueError so that I can add extra debugging
+information as the new member variable extra_info</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.rootfinder.find_interval">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.rootfinder.</span></span><span class="sig-name descname"><span class="pre">find_interval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">the_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/rootfinder.html#find_interval"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.rootfinder.find_interval" title="Permalink to this definition"></a></dt>
+<dd><p>starting from a 2% difference, move out from a
+point until the_func changes sign</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>the_func</strong> (<em>function</em>) – function that returns zero when on root</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – argument to the_func</p></li>
+<li><p><strong>*args</strong> (<em>tuple</em>) – additional arguments for the_func</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>brackets</strong> – left,right  brackets for root</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[left,right]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.rootfinder.fzero">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.rootfinder.</span></span><span class="sig-name descname"><span class="pre">fzero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">the_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_bracket</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">parms</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/rootfinder.html#fzero"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.rootfinder.fzero" title="Permalink to this definition"></a></dt>
+<dd><p>simple wrapper for optimize.zeros.brenth</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>the_func</strong> (<em>function</em>) – function that returns zero when on root</p></li>
+<li><p><strong>root_bracket</strong> (<em>[</em><em>left</em><em>, </em><em>right</em><em>]</em>) – left and right x values that bracket a sign change</p></li>
+<li><p><strong>*args</strong> (<em>tuple</em>) – additional arguments for the_func</p></li>
+<li><p><strong>**params</strong> (<em>dict</em>) – additional parameters for optimize.zeros.brenth</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>x value that produces the_func=0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.rootfinder.test_rootfinder">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.rootfinder.</span></span><span class="sig-name descname"><span class="pre">test_rootfinder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/rootfinder.html#test_rootfinder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.rootfinder.test_rootfinder" title="Permalink to this definition"></a></dt>
+<dd><p>run unit tests for rootfinder</p>
+</dd></dl>
+
+</section>
+<section id="module-a405.thermo.constants">
+<span id="constants-full-module"></span><h2>constants full module<a class="headerlink" href="#module-a405.thermo.constants" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="a405.thermo.constants.constants">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a405.thermo.constants.</span></span><span class="sig-name descname"><span class="pre">constants</span></span><a class="reference internal" href="_modules/a405/thermo/constants.html#constants"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.constants.constants" title="Permalink to this definition"></a></dt>
+<dd><p>A class containing constants relevant to atmospheric science.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>only</strong> (<em>none -- class variables</em>) – </p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Emanuel appendix 2</p>
+</dd></dl>
+
+</section>
+<section id="module-a405.thermo.thermlib">
+<span id="thermlib-full-module"></span><h2>thermlib full module<a class="headerlink" href="#module-a405.thermo.thermlib" title="Permalink to this heading"></a></h2>
+<p>Module for functions to calculate vapor pressure,
+thetae, etc.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.convertSkewToTemp">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">convertSkewToTemp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xcoord</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skew</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#convertSkewToTemp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.convertSkewToTemp" title="Permalink to this definition"></a></dt>
+<dd><p>Determines temperature from knowledge of a plotting coordinate
+system and corresponding plot skew.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xcoord</strong> (<em>int</em>) – X coordinate in temperature plotting coordinates.</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – Pressure (hPa).</p></li>
+<li><p><strong>skew</strong> (<em>int</em>) – Skew of a given coordinate system.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Temp</strong> – Converted temperature in degC.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">convertSkewToTemp</span><span class="p">(</span><span class="o">-</span><span class="mf">170.53835183003781</span><span class="p">,</span> <span class="mf">800.</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="go">30.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.convertTempToSkew">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">convertTempToSkew</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skew</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#convertTempToSkew"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.convertTempToSkew" title="Permalink to this definition"></a></dt>
+<dd><p>Determines the transformed temperature in plotting coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Temp</strong> (<em>float</em>) – Temperature (degC)</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – Pressure (hPa).</p></li>
+<li><p><strong>skew</strong> (<em>int</em>) – Designated skew factor of temperature.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>tempOut</strong> – Converted temperature (degC).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">convertTempToSkew</span><span class="p">(</span><span class="mf">30.</span><span class="p">,</span> <span class="mf">800.</span> <span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="go">-170.53835183003781</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_Td">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_Td</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_Td"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_Td" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the due point temperature of an air parcel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rv</strong> (<em>float</em>) – Mixing ratio (kg/kg).</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – Pressure (Pa).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Td</strong> – Dew point temperature (K).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find_Td</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span>
+<span class="go">253.39429263963504</span>
+</pre></div>
+</div>
+<p class="rubric">References</p>
+<p>Emanuel 4.4.14 p. 117</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_Tmoist">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_Tmoist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thetaE0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_theta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_Tmoist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_Tmoist" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the temperatures along a moist adiabat.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thetaE0</strong> (<em>float</em>) – Initial equivalent potential temperature (K).</p></li>
+<li><p><strong>press</strong> (<em>float</em><em> or </em><em>array_like</em>) – Pressure (Pa).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Temp</strong> – Temperature (K) of thetaE0 adiabat at ‘press’.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float or array_like</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">find_Tmoist</span><span class="p">(</span><span class="mf">300.</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)])</span>
+<span class="go">array([ 271.0638])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">find_Tmoist</span><span class="p">(</span><span class="mf">330.</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span>
+<span class="go">283.7226584032411</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_Tv">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_Tv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rvap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_Tv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_Tv" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the density (virtual) temperature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>temp</strong> (<em>float</em><em> or </em><em>np.array</em>) – temperatue (K).</p></li>
+<li><p><strong>rvap</strong> (<em>float</em><em> or </em><em>np.array</em>) – vapor  mixing ratio (kg/kg)</p></li>
+<li><p><strong>rl</strong> (<em>float</em><em> or </em><em>np.array</em>) – liquid mixing ratio (kg/kg)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Tv</strong> – density temperature (K).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float or np.array</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Thompkins eq. 2.38</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find_Tv</span><span class="p">(</span><span class="mf">300.</span><span class="p">,</span><span class="mf">1.e-2</span><span class="p">)</span><span class="c1"># Parcel is unsaturated.</span>
+<span class="go">301.866</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">find_Tv</span><span class="p">(</span><span class="mf">280.</span><span class="p">,</span><span class="mf">1.e-2</span><span class="p">,</span> <span class="mf">1.e-3</span><span class="p">)</span>  <span class="c1">#Parcel is saturated</span>
+<span class="go">281.4616</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_buoy">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_buoy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adia_Tv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_Tv</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_buoy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_buoy" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the buoyancy given an parcel and environment virtural temp</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>adia_Tv</strong> (<em>float</em>) – density temperature of the parcel (K)</p></li>
+<li><p><strong>env_Tv</strong> (<em>float</em>) – density temperature of environment (K)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>buoy</strong> – buoyancy (m/s/s)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find_buoy</span><span class="p">(</span><span class="mf">286.</span><span class="p">,</span><span class="mf">285.</span><span class="p">)</span>
+<span class="go">0.03438596491228071</span>
+</pre></div>
+</div>
+<p class="rubric">References</p>
+<p>Thompkins equation 3.3</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_esat">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_esat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temp</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_esat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_esat" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the saturation water vapor pressure over a flat
+surface of water at temperature ‘temp’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>temp</strong> (<em>float</em><em> or </em><em>array_like</em>) – Temperature of parcel (K).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>esatOut</strong> – Saturation water vapour pressure (Pa).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float or list</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find_esat</span><span class="p">(</span><span class="mf">300.</span><span class="p">)</span>
+<span class="go">3534.5196668891358</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">find_esat</span><span class="p">([</span><span class="mf">300.</span><span class="p">,</span> <span class="mf">310.</span><span class="p">])</span>
+<span class="go">array([ 3534.5197,  6235.5322])</span>
+</pre></div>
+</div>
+<p class="rubric">References</p>
+<p>Emanuel 4.4.14 p. 117</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_lcl">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_lcl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Td</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_lcl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_lcl" title="Permalink to this definition"></a></dt>
+<dd><p>Finds the temperature and pressure at the lifting condensation
+level (LCL) of an air parcel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Td</strong> (<em>float</em>) – Dewpoint temperature (K).</p></li>
+<li><p><strong>T</strong> (<em>float</em>) – Temperature (K).</p></li>
+<li><p><strong>p</strong> (<em>float</em>) – Pressure (Pa)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>Tlcl</strong> (<em>float</em>) – Temperature at the LCL (K).</p></li>
+<li><p><strong>plcl</strong> (<em>float</em>) – Pressure at the LCL (Pa).</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>NameError</strong> – If the air is saturated at a given Td and T (ie. Td &gt;= T)</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">Tlcl</span><span class="p">,</span> <span class="n">plcl</span><span class="p">]</span> <span class="o">=</span>  <span class="n">find_lcl</span><span class="p">(</span><span class="mf">280.</span><span class="p">,</span> <span class="mf">300.</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">Tlcl</span><span class="p">,</span> <span class="n">plcl</span><span class="p">]))</span>
+<span class="go">[   275.7625  59518.9287]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">find_lcl</span><span class="p">(</span><span class="mf">300.</span><span class="p">,</span> <span class="mf">280.</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="w">    </span><span class="o">...</span>
+<span class="gr">NameError</span>: <span class="n">parcel is saturated at this pressure</span>
+</pre></div>
+</div>
+<p class="rubric">References</p>
+<p>Emanuel 4.6.24 p. 130 and 4.6.22 p. 129</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_lv">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_lv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temp</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_lv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_lv" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the temperature dependent
+enthalpy of evaporation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>temp</strong> (<em>float</em><em> or </em><em>array_like</em>) – Temperature of parcel (K).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>lv</strong> – entalpy of evaporation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float or list</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find_lv</span><span class="p">(</span><span class="mf">293.</span><span class="p">)</span>
+<span class="go">2547052.0</span>
+</pre></div>
+</div>
+<p class="rubric">References</p>
+<p>Day 13 moist static energy notes</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_resid_rsat">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_resid_rsat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Tguess</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rsat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_resid_rsat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_resid_rsat" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate residual between target rsat and guess to
+rootfind saturation temperature for constant rsat</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Tguess</strong> (<em>float</em>) – <ol class="upperalpha simple" start="11">
+<li><p>guess temperature from rootfinder</p></li>
+</ol>
+</p></li>
+<li><p><strong>rsat</strong> (<em>float</em>) – (kg/kg) target saturation mixing ratio</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – (hPa) pressure level for rootfind</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>residual</strong> (<em>float</em>) – (kg/kg) differnce between target and guess rsat</p></li>
+<li><p><em>Reference</em></p></li>
+<li><p><em>———</em></p></li>
+<li><p><em>see thompkins 2.20</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_resid_thetae">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_resid_thetae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Tguess</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaeVal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_resid_thetae"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_resid_thetae" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate residual between target thetaeVal and guess to
+rootfind temperature for constant thetae</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Tguess</strong> (<em>float</em>) – <ol class="upperalpha simple" start="11">
+<li><p>guess temperature from rootfinder</p></li>
+</ol>
+</p></li>
+<li><p><strong>rsat</strong> (<em>float</em>) – (kg/kg) target saturation mixing ratio</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – (hPa) pressure level for rootfind</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>residual</strong> – (kg/kg) differnce between target and guess rsat</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>see thompkins 2.20</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_rsat">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_rsat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_rsat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_rsat" title="Permalink to this definition"></a></dt>
+<dd><p>calculate the saturation mixing ratio (kg/kg) at (temp,press)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>temp</strong> (<em>float</em>) – temperature (K)</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – pressure (Pa)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>rsat</strong> – satruation mixing ratio  (kg/kg)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_rvrl">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_rvrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_rvrl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_rvrl" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the vapour and liquid water mixing ratios.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Temp</strong> (<em>float</em>) – Temperature (K).</p></li>
+<li><p><strong>rT</strong> (<em>float</em>) – Total water mixing ratio (kg/kg).</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – Pressure (Pa).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>rv</strong> (<em>float</em>) – Water vapour mixing ratio (kg/kg).</p></li>
+<li><p><strong>rl</strong> (<em>float</em>) – Liquid water mixing ratio (kg/kg).</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – If any of the inputs are in vector form.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">find_rvrl</span><span class="p">(</span><span class="mf">250.</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">))</span><span class="o">*</span><span class="mf">1.e3</span><span class="p">)</span>
+<span class="go">[ 0.7433  9.2567]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">find_rvrl</span><span class="p">(</span><span class="mf">305.</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">))</span><span class="o">*</span><span class="mf">1.e3</span><span class="p">)</span>
+<span class="go">[ 10.   0.]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_theta">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_theta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_theta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_theta" title="Permalink to this definition"></a></dt>
+<dd><p>Computes potential temperature.
+Allows for either temp,p or T,p,rv as inputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>temp</strong> (<em>float</em>) – Temperature (K).</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – Pressure (Pa).</p></li>
+<li><p><strong>rv</strong> (<em>float</em><em>, </em><em>optional</em>) – Vapour mixing ratio (kg,kg). Can be appended as an argument
+in order to increase precision of returned ‘theta’ value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>thetaOut</strong> – Potential temperature (K).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>NameError</strong> – If an incorrect number of arguments is provided.</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Emanuel p. 111 4.2.11</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find_theta</span><span class="p">(</span><span class="mf">300.</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span> <span class="c1"># Only &#39;temp&#39; and &#39;press&#39; are input.</span>
+<span class="go">319.72798180767984</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">find_theta</span><span class="p">(</span><span class="mf">300.</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">,</span> <span class="n">rv</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span> <span class="c1"># &#39;temp&#39;, &#39;press&#39;, and &#39;rv&#39; all input.</span>
+<span class="go">319.72309475657323</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_thetaep">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_thetaep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Td</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_thetaep"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_thetaep" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the pseudo equivalent potential temperature of a
+parcel using Bolton’s formula</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Td</strong> (<em>float</em>) – Dewpoint temperature (K).</p></li>
+<li><p><strong>T</strong> (<em>float</em>) – Temperature (K).</p></li>
+<li><p><strong>p</strong> (<em>float</em>) – Pressure (Pa).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>thetaepOut</strong> – Pseudo equivalent potential temperature (K).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Note that the pseudo equivalent potential temperature of an air
+parcel is not a conserved variable.</p>
+<p class="rubric">References</p>
+<p>Emanuel 4.7.9 p. 132</p>
+<p class="rubric">Examples</p>
+<p># note difference between true thetae (find_thetaes and find_thetaet)
+# and pseudo-adiabat (find_thetaep)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find_thetaep</span><span class="p">(</span><span class="mf">280.</span><span class="p">,</span> <span class="mf">300.</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span> <span class="c1"># Parcel is unsaturated.</span>
+<span class="go">344.99830738253371</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rt</span> <span class="o">=</span> <span class="n">find_rsat</span><span class="p">(</span><span class="mi">280</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">find_thetaet</span><span class="p">(</span><span class="mf">280.</span><span class="p">,</span> <span class="n">rt</span><span class="p">,</span> <span class="mf">300.</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span> <span class="c1"># Parcel is unsaturated.</span>
+<span class="go">342.93068265625539</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find_thetaep</span><span class="p">(</span><span class="mf">280.</span><span class="p">,</span> <span class="mf">280.</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span> <span class="c1"># Parcel is saturated.</span>
+<span class="go">321.5302927767795</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find_thetaes</span><span class="p">(</span><span class="mf">280.</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span> <span class="c1"># Parcel is saturated.</span>
+<span class="go">319.72687107952828</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_thetaes">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_thetaes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_thetaes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_thetaes" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the true equivalent potential temperature of an air
+parcel assuming saturation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Temp</strong> (<em>float</em>) – Temperature (K).</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – Pressure (Pa).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>thetaep</strong> – Pseudo equivalent potential temperature (K).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Empirical fit to Emanuel 4.7.8 – neglects heat
+capacity of liquid water and ice</p>
+<p class="rubric">References</p>
+<p>Emanuel 4.7.9 p. 132</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find_thetaes</span><span class="p">(</span><span class="mf">300.</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span>
+<span class="go">399.53931578042267</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_thetaet">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_thetaet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Td</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_thetaet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_thetaet" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the true equivalent potential temperature of a
+parcel from its entropy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Td</strong> (<em>float</em>) – Dewpoint temperature (K).</p></li>
+<li><p><strong>rt</strong> (<em>float</em>) – total water mixing ratio (kg/kg)</p></li>
+<li><p><strong>T</strong> (<em>float</em>) – Temperature (K).</p></li>
+<li><p><strong>p</strong> (<em>float</em>) – Pressure (Pa).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>thetaetOut</strong> – true equivalent potential temperature (K).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Emanuel 4.5.11 p. 120 or my Day 10 equivalent potential temperature notes</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find_thetaet</span><span class="p">(</span><span class="mf">300.</span><span class="p">,</span><span class="mf">1.e-2</span><span class="p">,</span> <span class="mf">280.</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span> <span class="c1"># Parcel is saturated.</span>
+<span class="go">319.3543617606212</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">find_thetaet</span><span class="p">(</span><span class="mf">280.</span><span class="p">,</span><span class="mf">1.e-2</span><span class="p">,</span> <span class="mf">300.</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span>  <span class="c1">#Parcel is unsaturated</span>
+<span class="go">342.52792353970784</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.find_thetal">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">find_thetal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">press</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#find_thetal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.find_thetal" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the true equivalent potential temperature of an air
+parcel assuming saturation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>temp</strong> (<em>float</em>) – Temperature (K).</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – Pressure (Pa).</p></li>
+<li><p><strong>rt</strong> (<em>float</em>) – mixing ratio  (kg/kg</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>thetal</strong> – liquid water potential temperature (K).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Empirical fit</p>
+<p class="rubric">References</p>
+<p>Emanuel 4.5.15 p. 121</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.make_dry_adiabat">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">make_dry_adiabat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#make_dry_adiabat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.make_dry_adiabat" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the temperature given potential temperatures
+along a specified pressure profile.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Theta</strong> (<em>float</em>) – Potential Temperature (K)</p></li>
+<li><p><strong>press</strong> (<em>float</em><em> or </em><em>array-like</em>) – Pressure (Pa).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>tempOut</strong> – Converted temperature (degC).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float or array-like</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">make_dry_adiabat</span><span class="p">(</span><span class="mf">300.</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
+<span class="go">300.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.test_therm">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">test_therm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#test_therm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.test_therm" title="Permalink to this definition"></a></dt>
+<dd><p>execute unit tests for thermlib</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.theta_diff">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">theta_diff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Tguess</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#theta_diff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.theta_diff" title="Permalink to this definition"></a></dt>
+<dd><p>use  theta for rootfinder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Tguess</strong> (<em>float</em>) – Trial temperature value (K).</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – Pressure (Pa).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>theDiff</strong> – The difference between the values of ‘thetaEguess’ and
+‘thetaE0’. This difference is then compared to the tolerance
+allowed by brenth.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.thetaep_diff">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">thetaep_diff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Tguess</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaE0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#thetaep_diff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.thetaep_diff" title="Permalink to this definition"></a></dt>
+<dd><p>use pseudo thetae (thetaep) for rootfinder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Tguess</strong> (<em>float</em>) – Trial temperature value (K).</p></li>
+<li><p><strong>ws0</strong> (<em>float</em>) – Initial saturated mixing ratio (kg/kg).</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – Pressure (Pa).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>theDiff</strong> – The difference between the values of ‘thetaEguess’ and
+‘thetaE0’. This difference is then compared to the tolerance
+allowed by brenth.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.thetaes_diff">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">thetaes_diff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Tguess</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaE0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#thetaes_diff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.thetaes_diff" title="Permalink to this definition"></a></dt>
+<dd><p>use true thetae (thetaes) for rootfinder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Tguess</strong> (<em>float</em>) – Trial temperature value (K).</p></li>
+<li><p><strong>ws0</strong> (<em>float</em>) – Initial saturated mixing ratio (kg/kg).</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – Pressure (Pa).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>theDiff</strong> – The difference between the values of ‘thetaEguess’ and
+‘thetaE0’. This difference is then compared to the tolerance
+allowed by brenth.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.tinvert_rsat">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">tinvert_rsat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Tstart</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rsat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#tinvert_rsat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.tinvert_rsat" title="Permalink to this definition"></a></dt>
+<dd><p>rootfind the temp that produces rsat at press.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Tstart</strong> (<em>float</em>) – temperature (K)</p></li>
+<li><p><strong>rsat</strong> (<em>float</em>) – saturation mixing ratio (kg/kg)</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – pressure (hPa)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Tdew</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>temperature (K) at with air is saaturated</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.thermo.thermlib.tinvert_thetae">
+<span class="sig-prename descclassname"><span class="pre">a405.thermo.thermlib.</span></span><span class="sig-name descname"><span class="pre">tinvert_thetae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thetaeVal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/thermo/thermlib.html#tinvert_thetae"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.thermo.thermlib.tinvert_thetae" title="Permalink to this definition"></a></dt>
+<dd><p>temp,rv,rl=tinvert_thetae(thetaeVal, rT, press)</p>
+<p>Uses a rootfinder to determine the temperature for which the
+pseudo equivilant potential temperature (thetaepress) is equal to the
+equivilant potential temperature (thetae) of the parcel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thetaeVal</strong> (<em>float</em>) – Thetae of parcel (K).</p></li>
+<li><p><strong>rT</strong> (<em>float</em>) – Total water mixing ratio (kg/kg).</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – Pressure of parcel in (Pa).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>theTemp</strong> (<em>float</em>) – Temperature for which thetaep equals the parcel thetae (K).</p></li>
+<li><p><strong>rv</strong> (<em>float</em>) – Vapor mixing ratio of the parcel (kg/kg).</p></li>
+<li><p><strong>rl</strong> (<em>float</em>) – liquid water mixing ratio of the parcel (kg/kg) at ‘press’.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>IOError</strong> – If ‘press’ is larger than 100000 Pa.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tinvert_thetae</span><span class="p">(</span><span class="mf">300.</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">8.e4</span><span class="p">)</span>
+<span class="go">(278.683729619619, 0.001, 0)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-a405.skewT.skewlib">
+<span id="skewlib-full-module"></span><h2>skewlib full module<a class="headerlink" href="#module-a405.skewT.skewlib" title="Permalink to this heading"></a></h2>
+<p>construct a skewT - ln P diagram with dry adiabats</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.skewT.skewlib.makeSkewDry">
+<span class="sig-prename descclassname"><span class="pre">a405.skewT.skewlib.</span></span><span class="sig-name descname"><span class="pre">makeSkewDry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skew</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/skewT/skewlib.html#makeSkewDry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.skewT.skewlib.makeSkewDry" title="Permalink to this definition"></a></dt>
+<dd><p>draw a skew-T lnP diagram on an axis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax</strong> (<em>matplotlib.axes</em>) – matplotlib figure axis</p></li>
+<li><p><strong>skew</strong> (<em>float</em>) – adjustable coefficient to make isotherms slope
+compared to adiabats</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>ax</strong> (<em>matplotlib.axes</em>) – the modified figure axis</p></li>
+<li><p><strong>skew</strong> (<em>float</em>) – skew coefficient (K)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.skewT.skewlib.plot_test">
+<span class="sig-prename descclassname"><span class="pre">a405.skewT.skewlib.</span></span><span class="sig-name descname"><span class="pre">plot_test</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/skewT/skewlib.html#plot_test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.skewT.skewlib.plot_test" title="Permalink to this definition"></a></dt>
+<dd><p>create test plot when module is run</p>
+</dd></dl>
+
+</section>
+<section id="module-a405.skewT.fullskew">
+<span id="fullskew-module"></span><h2>fullskew module<a class="headerlink" href="#module-a405.skewT.fullskew" title="Permalink to this heading"></a></h2>
+<p>construct a skewT - ln P diagram with rsat and thetaes lines</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.skewT.fullskew.find_corners">
+<span class="sig-prename descclassname"><span class="pre">a405.skewT.fullskew.</span></span><span class="sig-name descname"><span class="pre">find_corners</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">press</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skew</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/skewT/fullskew.html#find_corners"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.skewT.fullskew.find_corners" title="Permalink to this definition"></a></dt>
+<dd><p>convert a pair of temperatures into skew plotting coordinates at a constant pressure level</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>temps</strong> (<em>[</em><em>float</em><em>]</em>) – xaxis corner temperatures (degC)</p></li>
+<li><p><strong>press</strong> (<em>float</em>) – pressure level for skew conversion</p></li>
+<li><p><strong>skew</strong> (<em>float</em>) – coefficient to use in the tempToSkew conversion</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>corners</strong> – x axis corners in plotting coordinates</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.skewT.fullskew.makeSkewWet">
+<span class="sig-prename descclassname"><span class="pre">a405.skewT.fullskew.</span></span><span class="sig-name descname"><span class="pre">makeSkewWet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">corners</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skew</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_fun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/skewT/fullskew.html#makeSkewWet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.skewT.fullskew.makeSkewWet" title="Permalink to this definition"></a></dt>
+<dd><p>draw a skew-T lnP diagram on an axis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax</strong> (<em>matplotlib.axes</em>) – matplotlib figure axis</p></li>
+<li><p><strong>corners</strong> (<em>[</em><em>float</em><em>]</em>) – x axis temperature limits (degC)</p></li>
+<li><p><strong>skew</strong> (<em>float</em>) – adjustable coefficient to make isotherms slope
+compared to adiabats</p></li>
+<li><p><strong>label_fun</strong> (<em>function</em>) – optional function to generate contour intervals, see make_default_labels</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ax</strong> – the modified figure axis</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>matplotlib.axes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.skewT.fullskew.make_default_labels">
+<span class="sig-prename descclassname"><span class="pre">a405.skewT.fullskew.</span></span><span class="sig-name descname"><span class="pre">make_default_labels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/skewT/fullskew.html#make_default_labels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.skewT.fullskew.make_default_labels" title="Permalink to this definition"></a></dt>
+<dd><p>set up the contour labels for temperature, rs, theta and theate:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rsLabels</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">thetaLabels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">390</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">thetaeLabels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">410</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">tempLabels</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>override this function and pass to makeSkewWet to change the countour intervals</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>tempLabels,rsLabels, thetaLabels, thetaeLabels</strong> – tuple of lists with contour labels</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.skewT.fullskew.plot_test">
+<span class="sig-prename descclassname"><span class="pre">a405.skewT.fullskew.</span></span><span class="sig-name descname"><span class="pre">plot_test</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/skewT/fullskew.html#plot_test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.skewT.fullskew.plot_test" title="Permalink to this definition"></a></dt>
+<dd><p>create test plot when module is run</p>
+</dd></dl>
+
+</section>
+<section id="module-a405.soundings.wyominglib">
+<span id="wyominglib-full-module"></span><h2>wyominglib full module<a class="headerlink" href="#module-a405.soundings.wyominglib" title="Permalink to this heading"></a></h2>
+<p>module to read the wyoming upperair site and parse it into
+dataframes  – see newsoundings.ipynb for an example</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.soundings.wyominglib.make_frames">
+<span class="sig-prename descclassname"><span class="pre">a405.soundings.wyominglib.</span></span><span class="sig-name descname"><span class="pre">make_frames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">html_doc</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/soundings/wyominglib.html#make_frames"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.soundings.wyominglib.make_frames" title="Permalink to this definition"></a></dt>
+<dd><p>turn an html page retrieved from the wyoming site into a dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>html_doc</strong> (<em>string</em>) – web page from wyoming upperair sounding site
+<a class="reference external" href="http://weather.uwyo.edu/cgi-bin/sounding">http://weather.uwyo.edu/cgi-bin/sounding</a> retrieved by
+the requests module</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>attr_dict</strong> (<em>dict</em>) – attr_dict dictionary with [‘header’, ‘site_id’,’longitude’,’latitude’, ‘elevation’, ‘units’]</p></li>
+<li><p><strong>sound_dict</strong> (<em>dict</em>) – sounding dictionary with sounding times as keys and sounding as dataframes</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.soundings.wyominglib.parse_data">
+<span class="sig-prename descclassname"><span class="pre">a405.soundings.wyominglib.</span></span><span class="sig-name descname"><span class="pre">parse_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/soundings/wyominglib.html#parse_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.soundings.wyominglib.parse_data" title="Permalink to this definition"></a></dt>
+<dd><p>Read a single sounding into a dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_text</strong> (<em>str</em>) – sounding text</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>df_out</strong> (<em>dataframe</em>) – 11 column data frame with sounding values</p></li>
+<li><p><strong>unit_name</strong> (<em>list</em>) – list of strings with name of units of each column</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.soundings.wyominglib.parse_header">
+<span class="sig-prename descclassname"><span class="pre">a405.soundings.wyominglib.</span></span><span class="sig-name descname"><span class="pre">parse_header</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">header_text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/soundings/wyominglib.html#parse_header"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.soundings.wyominglib.parse_header" title="Permalink to this definition"></a></dt>
+<dd><p>Read a header returned by make_frames and
+return station information</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>header_text</strong> (<em>str</em>) – string containing wyoming header read with make_frames</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>theDate</strong> (<em>datetime</em>) – date of sounding</p></li>
+<li><p><strong>the_id</strong> (<em>int</em>) – 5 digit souding id</p></li>
+<li><p><strong>lat</strong> (<em>float</em>) – latitude (degrees North)</p></li>
+<li><p><strong>lon</strong> (<em>float</em>) – longitude (degrees east)</p></li>
+<li><p><strong>elev</strong> (<em>float</em>) – station elevation (meters)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.soundings.wyominglib.read_soundings">
+<span class="sig-prename descclassname"><span class="pre">a405.soundings.wyominglib.</span></span><span class="sig-name descname"><span class="pre">read_soundings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">soundingdir</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/soundings/wyominglib.html#read_soundings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.soundings.wyominglib.read_soundings" title="Permalink to this definition"></a></dt>
+<dd><p>read the soundings created by write_soundings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>soundingdir</strong> (<em>string</em>) – path to directory containing sounding csv files and metadata.json</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>meta_dict</strong> – dictionary with keys dict_keys([‘filelist’, ‘attributes’, ‘input_args’, ‘file_dict’, ‘sounding_dict’])</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.soundings.wyominglib.write_soundings">
+<span class="sig-prename descclassname"><span class="pre">a405.soundings.wyominglib.</span></span><span class="sig-name descname"><span class="pre">write_soundings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputdir</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/soundings/wyominglib.html#write_soundings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.soundings.wyominglib.write_soundings" title="Permalink to this definition"></a></dt>
+<dd><p>function to test downloading a sounding
+from <a class="reference external" href="http://weather.uwyo.edu/cgi-bin/sounding">http://weather.uwyo.edu/cgi-bin/sounding</a> and
+creating an folder soundings and metadata</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_dict</strong> (<em>dict</em>) – dictionary with fields needed to specify the sounding
+i.e.
+dict(region=’naconf’,year=’2017’,month=’7’,start=’0100’,stop=’1800’,station=’72451’)</p></li>
+<li><p><strong>outputdir</strong> (<em>string</em>) – path to directory that will hold the csv sounding files
+will be overwritten if it exists</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>None</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>soundings and metadata.json file will be written as a side effect</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-a405.dropgrow.aerolib">
+<span id="aerolib-full-module"></span><h2>aerolib full module<a class="headerlink" href="#module-a405.dropgrow.aerolib" title="Permalink to this heading"></a></h2>
+<p>calculate lognormal aerosol mass/number distributions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.dropgrow.aerolib.create_koehler">
+<span class="sig-prename descclassname"><span class="pre">a405.dropgrow.aerolib.</span></span><span class="sig-name descname"><span class="pre">create_koehler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aero</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parcel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/dropgrow/aerolib.html#create_koehler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.dropgrow.aerolib.create_koehler" title="Permalink to this definition"></a></dt>
+<dd><p>generate a koehler function for specific aerosol/parcel conditions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>aero</strong> (<em>namedtuple</em>) – constants used for the aerosol terms in the Koehler equation</p></li>
+<li><p><strong>parcel</strong> (<em>namedtjuple</em>) – constants used for the thermodynmaic terms in the
+droplet growth/Koehler equations</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>find_S</strong> – function to find saturation over curved solution</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.dropgrow.aerolib.find_koehler_coeffs">
+<span class="sig-prename descclassname"><span class="pre">a405.dropgrow.aerolib.</span></span><span class="sig-name descname"><span class="pre">find_koehler_coeffs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aero</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parcel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/dropgrow/aerolib.html#find_koehler_coeffs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.dropgrow.aerolib.find_koehler_coeffs" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the a, b coefficients for the approximate Koehler eqn</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>aero</strong> (<em>namedtuple</em>) – constants used for the aerosol terms in the Koehler equation</p></li>
+<li><p><strong>parcel</strong> (<em>namedtjuple</em>) – constants used for the thermodynmaic terms in the
+droplet growth/Koehler equations</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>a</strong> (<em>float</em>) – coefficient for a/r term (m)</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – coefficient for b*m/r^3 term (m^3/kg)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.dropgrow.aerolib.lognormal">
+<span class="sig-prename descclassname"><span class="pre">a405.dropgrow.aerolib.</span></span><span class="sig-name descname"><span class="pre">lognormal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/dropgrow/aerolib.html#lognormal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.dropgrow.aerolib.lognormal" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate lognormal distribution for variable x</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>vector</em><em> (</em><em>float</em><em>)</em>) – aerosol masses (kg)  (for example)</p></li>
+<li><p><strong>mu</strong> (<em>float</em>) – log(mean mass)</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – log(standard deviation)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>out</strong> – lognormal pdf, normalized to 1 (units: 1/[x], where [x] are the units of x)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>vector (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-a405.dropgrow.drop_grow">
+<span id="dropgrow-full-module"></span><h2>dropgrow full module<a class="headerlink" href="#module-a405.dropgrow.drop_grow" title="Permalink to this heading"></a></h2>
+<p>calculate the grow history of droplet categories in a constant velocity updraft</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.dropgrow.drop_grow.Scalc">
+<span class="sig-prename descclassname"><span class="pre">a405.dropgrow.drop_grow.</span></span><span class="sig-name descname"><span class="pre">Scalc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cloud_tup</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/dropgrow/drop_grow.html#Scalc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.dropgrow.drop_grow.Scalc" title="Permalink to this definition"></a></dt>
+<dd><p>calculate the environmental saturation using conservation
+of total water mixing ratio cloud_top.rt and the current
+value of the liquid water mixing ratio rl</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>var_vec</strong> (<em>vector</em><em>(</em><em>float</em><em>)</em>) – vector of values to be integrated</p></li>
+<li><p><strong>cloud_top</strong> (<em>namedtuple</em>) – tuple of necessary coefficients</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Sout</strong> – environmental saturation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.dropgrow.drop_grow.find_derivs">
+<span class="sig-prename descclassname"><span class="pre">a405.dropgrow.drop_grow.</span></span><span class="sig-name descname"><span class="pre">find_derivs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">the_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cloud_tup</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/dropgrow/drop_grow.html#find_derivs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.dropgrow.drop_grow.find_derivs" title="Permalink to this definition"></a></dt>
+<dd><p>calcuate derivatives of var_vec</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>var_vec</strong> (<em>vector</em><em>(</em><em>float</em><em>)</em>) – vector of values to be integrated</p></li>
+<li><p><strong>the_time</strong> (<em>float</em>) – timestep</p></li>
+<li><p><strong>cloud_tup</strong> (<em>namedtuple</em>) – tuple of necessary coefficients</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>deriv_vec</strong> – derivatives of each of var_vec</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>vector(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.dropgrow.drop_grow.find_diff">
+<span class="sig-prename descclassname"><span class="pre">a405.dropgrow.drop_grow.</span></span><span class="sig-name descname"><span class="pre">find_diff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S_target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">koehler_fun</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/dropgrow/drop_grow.html#find_diff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.dropgrow.drop_grow.find_diff" title="Permalink to this definition"></a></dt>
+<dd><p>zero function for rootfinder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logr</strong> (<em>float</em>) – log of radius</p></li>
+<li><p><strong>S_target</strong> (<em>float</em>) – Satutation ratio to match</p></li>
+<li><p><strong>m</strong> (<em>float</em>) – aerosol mass (kg)</p></li>
+<li><p><strong>koehler_fun</strong> (<em>function</em>) – function that returns S as function of radius (m) and aerosol mass (kg)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Sdiff</strong> – difference between target and guess</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.dropgrow.drop_grow.rlcalc">
+<span class="sig-prename descclassname"><span class="pre">a405.dropgrow.drop_grow.</span></span><span class="sig-name descname"><span class="pre">rlcalc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cloud_tup</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nvars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/dropgrow/drop_grow.html#rlcalc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.dropgrow.drop_grow.rlcalc" title="Permalink to this definition"></a></dt>
+<dd><p>calculate the liquid water by integrating n(r)r**3</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>var_vec</strong> (<em>vector</em><em>(</em><em>float</em><em>)</em>) – vector of values to be integrated</p></li>
+<li><p><strong>cloud_top</strong> (<em>namedtuple</em>) – tuple of necessary coefficients</p></li>
+<li><p><strong>nvars</strong> (<em>int</em>) – number of bulk thermodynamic variables (i.e. number of variables
+that are not droplet radii</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a405.dropgrow.drop_grow.rlderiv">
+<span class="sig-prename descclassname"><span class="pre">a405.dropgrow.drop_grow.</span></span><span class="sig-name descname"><span class="pre">rlderiv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deriv_vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cloud_tup</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nvars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/a405/dropgrow/drop_grow.html#rlderiv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#a405.dropgrow.drop_grow.rlderiv" title="Permalink to this definition"></a></dt>
+<dd><p>calculate the time derivative of the liquid water content
+using drop_grow.pdf eqn 21b</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>var_vec</strong> (<em>vector</em><em>(</em><em>float</em><em>)</em>) – vector of values to be integrated</p></li>
+<li><p><strong>deriv_vec</strong> (<em>vector</em><em>(</em><em>float</em><em>)</em>) – derivatives of each of var_vec members</p></li>
+<li><p><strong>cloud_tup</strong> (<em>namedtuple</em>) – tuple of input coefficients</p></li>
+<li><p><strong>nvars</strong> (<em>int</em>) – number of bulk thermodynamic variables (i.e. number of variables
+that are not droplet radii</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>drldt</strong> – rate of change of rl</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, phaustin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
